@@ -1,0 +1,13 @@
+2022-01-27	12:30:54	f1891c41-8fb3-43d6-908b-78314fdadc19	TypeError	fsPromises.readFil is not a function
+2022-01-30	17:45:36	e1250f18-9aef-4831-b32c-fca28a65b021	Error: Not allowed by CORS
+2022-01-30	21:47:35	03868f8d-6004-40ae-a7a3-2a1512495abe	TypeError: req.setHeader is not a function
+2022-02-02	16:36:31	5ef8ebb7-9f16-4306-8f50-c6e1fbc1ab92	TypeError: this.employees is not iterable
+2022-02-09	14:33:18	a9aac550-ff7b-4441-a12d-d3996cf58bd0	TypeError: name argument is required to req.get
+2022-02-09	15:50:42	2c532ea5-455b-46ed-a8d9-fd63e2b46ad8	TypeError: req.headers is not a function
+2022-03-02	22:17:35	06f06997-354c-4a9e-904d-cb6f6e19ddbc	SyntaxError: Unexpected token s in JSON at position 45
+2022-03-19	00:24:46	3ac6568c-02eb-44ad-80a5-4f308476414e	Error: Not allowed by CORS
+2022-03-19	00:26:46	e6912cd1-2ecd-4500-86fe-79562dafb116	Error: Not allowed by CORS
+2022-03-19	00:30:42	265696ee-7d37-4954-8bb2-d5fa40c2d854	Error: Not allowed by CORS
+2022-03-19	00:34:00	d0899e77-67c9-4317-b758-437e053994c5	Error: Not allowed by CORS
+2022-03-19	00:37:26	bb5902ba-6d26-40bd-a005-8a70e21f3151	Error: Not allowed by CORS
+2022-03-19	00:42:26	acf9794d-aa7b-49de-958f-b7fe8a2a92ad	Error: Not allowed by CORS
