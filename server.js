@@ -51,19 +51,33 @@ app.use("/employees", require("./routes/api/employees"));
 app.use("/users", require("./routes/api/users"));
 
 // * 404 page
-app.all("*", (req, res) => {
-    res.sendStatus(404);
+// app.all("*", (req, res) => {
+//     res.sendStatus(404);
 
-    if (req.accepts("html")) {
-        res.sendFile("./views/404.html", { root: __dirname });
-    } else if (req.accepts("json")) {
-        res.json({ error: "404 Not Found!" });
-    } else {
-        res.type("txt").send("404 Not Found!");
-    }
-});
+//     if (req.accepts("html")) {
+//         res.sendFile("./views/404.html", { root: __dirname });
+//     } else if (req.accepts("json")) {
+//         res.json({ error: "404 Not Found!" });
+//     } else {
+//         res.type("txt").send("404 Not Found!");
+//     }
+// });
 
 app.use(errorHandler);
+
+if (process.env.NODE_ENV === "production") {
+    app.use(express.static(path.join(__dirname, "../frontend/build/")));
+
+    app.get("*", (req, res) => {
+        res.sendFile(
+            path.resolve(__dirname, "..", "frontend", "build", "index.html")
+        );
+    });
+} else {
+    app.get("/", (req, res) => {
+        res.send("API is running ..");
+    });
+}
 
 mongoose.connection.once("open", () => {
     console.log("connected to MongoDB");
